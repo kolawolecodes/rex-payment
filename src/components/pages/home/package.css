@@ -1,0 +1,15 @@
+.package_container {
+    padding: 10px;
+
+}
+
+.sdk_title {
+    font-size: 16px;
+    font-weight: 900;
+    color: red;
+}
+
+.package_content {
+    margin-top: -15px;
+    font-weight: 600;
+}

@@ -1,0 +1,94 @@
+.authentication {
+    display: flex;
+    width: 90%;
+    gap: 1.5rem;
+    margin: auto auto;
+    color: #0a1e36;
+    font-size: 1rem;
+}
+
+.auth_wrapper {
+    width: 100%;
+}
+.main_auth_container {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.Auth_title {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.testMode_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.testMode_title_containter, 
+.testMode_descrpt_containter,
+.testMode_descrpt_container {
+    display: inline-block;
+}
+.testMode_title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.testMode_descrpt, .authApiCalls_instrct_container {
+    margin: 1rem 0 1rem 0;
+}
+
+.testMode_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.testMode_list_unit {
+    display: flex;
+    gap: 15px;
+}
+
+.testMode_unit_details, .retrieveAPI_title {
+    gap: 10px;
+    font-weight: 600;
+    width: 100%;  
+}
+
+.retrieveAPI_title {
+    font-weight: 100;
+}
+.testMode_unit_details > span {
+    font-weight: 100;
+    width: 85%;
+    margin-left: 5px;
+}
+.test_list_index {
+    font-size: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.authApiCalls_instrct_container {
+    display: inline-block;
+    margin: 1.5rem 0;
+}
+
+.authApiCalls_instrct_container {
+    display: inline-block;
+}
+
+
+/* .error_wrapper {
+    width: 100%;
+    border: solid green;
+}
+.example_container {
+    width: 100%;
+} */

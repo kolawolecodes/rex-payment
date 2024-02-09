@@ -1,0 +1,8 @@
+.paymtPage {
+    display: flex;
+    width: 90%;
+    margin: auto auto;
+    gap: 1.5rem;
+    color: #0a1e36;
+    font-size: 1rem;
+}

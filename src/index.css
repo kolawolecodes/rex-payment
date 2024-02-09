@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat&family=Roboto:ital,wght@1,900&display=swap');
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "inter", sans-serif;
+  background-color: #fff;
+  color: #0a1e36;
+  margin: 0;
+  padding: 0;
+ 
+}
+.app {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar_wrapper {
+  width: 100%;
+  display: flex;
+}
+.main_container {
+  margin-left: 20vw;
+  width: 100%;
+}
+
+.sidebar {
+  width: 20vw;
+  height: auto;
+  height:100%;
+  position:fixed;
+  z-index: 10;
+  overflow: auto;
+}
+
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sideBar_main_container {
+  margin: 15vh 30px 40px 30px;
+  height: 100%;
+  overflow: "auto";
+}
+.side_item {
+  display: block;
+  width: 15vw;
+  border-bottom: 0.01rem solid #ff9999;
+}
+
+.sidebar_title_container {
+ 
+}
+
+.sidebar_title span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#sidebar_content {
+  height: 0;
+  overflow: hidden;
+
+}
+
+#sidebar_content.open {
+  height: auto;
+}
+
+.NavLink {
+  color: #e1e2e7;
+  text-decoration-line: none;
+}
+#sidebarSubcontent {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  padding:  0.5rem;
+  margin: 0 0 0.2rem 1rem;
+  color: #0a1e36;
+  transition: all 1s;
+  
+}
+
+.NavLink #sidebarSubcontent:hover {
+  background-color: #e3e5e8;
+  color: #ff0000;
+  
+}
+
+#sidebarSubcontent 
+#sidebarSubcontent.open {
+  height: auto;
+}
+
+
+
+
+.searchSignIn {
+  /* width: 80vw; */
+  /* height: auto;
+  display: flex;
+  flex-direction: column; */
+  /* margin-left: 20vw; */
+}
+
+/* search input */
+#search {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 0.02rem solid #e1e2e7;
+}
+
+#search::placeholder {
+  padding-left: 40px;
+}
+
+
+/* Home page style */
+.thisHome {
+  width: 100%;
+}
+
+.thisHome_innercontainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto auto;
+  gap: 30px;
+  padding: 0;
+}
+
+.title_documentstion {
+  margin-top: 1.2rem;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-bottom: -20px;
+}
+
+.package_line {
+  display: flex;
+  width: 70%;
+  gap: 20px;
+}
+
+#package_line2 {
+  margin-bottom: 2rem;
+} 
+
+/* footer */
+.helpful {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.helpful_question_container {
+  display: inline-block;
+}
+.helpful_question {
+  padding: 1rem 0.5rem 1rem 0;
+}
+.answer_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.answer_yes_container, .answer_no_container {
+  display: inline-block;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.yesAnsNav {
+  text-decoration-line: none;
+}
+.answer_no, .answer_yes {
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.answer_yes {
+  color: #fff;
+}
+
+/* styling Right hand side */
+.right_hand_steps {
+  display:flex;
+  width: 17vw;
+}
+
+.rightHand_step_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.onPage_step_title {
+  margin-top: 5vh;
+  margin-bottom: -10px;
+  width: 100%;
+  font-weight: 15rem;
+}
+
+.stepsOverview {
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  padding: 0;
+}
+
+.stepsOverview > span {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+/* Steps Error prompter */
+/* .step_error_container {
+  width: 95%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0 0.7rem 0;
+  border: solid;
+} */
+
+.step_error_main_container {
+  width: 90%;
+  margin: auto auto;
+  display: flex;
+  gap: 15px;
+  border: solid;
+}
+
+/* .test {
+  display: grid;
+  grid-template-columns: 
+} */
+
+.step_error_message {
+  font-weight: 600;
+}
+
+
+/* Image styling */
+
+.imageAndName {
+  display: flex;
+  align-items: center;
+}
+.image_wrapper {
+  padding: 0.5rem;
+}
+
+
+
+.libraryImage {
+  width: 80px;
+  height: 80px;
+}
+
+/* ERROR STYLING LATEST */
+.errorWrapper {
+  margin: 1.5rem 0;
+  padding: 0.2rem 0.5rem 0.2rem 1rem;
+  border-radius: 0.7rem;
+  padding-bottom: 1.5rem;
+}
+.errorContainer {
+  display: flex;
+  gap:1rem;
+}
+
+.errorDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+
+.errorMessage {
+  margin-top: -12px;
+  font-size: 0.9rem;
+}
+
+/* Requirement */
+
+.requirement_wrapper, .handling_wrapper {
+  margin-top: 1.5rem;
+  width: 85%;
+  border: 0.09rem solid #cfd3d9;
+  border-radius: 0.5rem;
+}

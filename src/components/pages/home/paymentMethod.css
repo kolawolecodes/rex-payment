@@ -1,0 +1,64 @@
+.paymentMethod {
+    display: flex;
+    width: 90%;
+    margin: auto auto;
+    gap: 1.5rem;
+    color: #0a1e36;
+    font-size: 1rem;
+}
+.payment_title_container {
+    display: block;
+    border: solid blue
+}
+.paymentMethod_wrapper {
+    border: solid red;
+}
+
+.payment_title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.paymentTable_container {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.payment_inner_container {
+    width: 75%;
+}
+.table_header_container, .tableBody {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.table_header_container {
+    border-bottom: 0.04rem solid #afafb2;
+    padding:  0 1rem;
+}
+
+.payment_detail_conatainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tableBody {
+    border-bottom: 0.04rem solid #afafb2
+}
+
+.tableBody_value {
+    font-size: 0.9rem;
+    background: whitesmoke;
+    padding: 0.09rem 0.4rem;
+    border-radius: 0.3rem;
+    border: 0.08rem solid #afafb2;
+}

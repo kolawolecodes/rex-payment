@@ -1,0 +1,93 @@
+.quickStart {
+    display: flex;
+    width: 90%;
+    margin: auto auto;
+    gap: 2px;
+    margin-top: -20px;
+    color: #0a1e36;
+}
+
+.left_hand_steps {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step_video {
+    width: 600px;
+    height: 337.50px;
+    margin: 2rem 0 2rem 0;
+}
+
+.quickStart_container, .step_container {
+    font-size: 15px;
+    font-weight: 500;
+    width: 95%;
+    margin: auto auto;
+}
+
+.step_title_container {
+    width: 95%;
+    margin-bottom: 1.5rem;
+}
+
+.step_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0;
+    color: #0a1e36;
+}
+
+.step_body_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.step_body {
+    width: 95%;
+}
+
+.quickStart_title {
+    font-weight: 800;
+}
+
+.step_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step_step_by_step_container {
+    
+}
+.step_list_head {
+    display: block;
+    font-weight: 700;
+}
+.step_list {
+    margin: 1.2rem 0 1.2rem 0;
+
+}
+.step, .sideStep {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 0.35rem;
+}
+.sideStep {
+    font-size: 12px;
+}
+
+.step_index {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.right_step_title {
+    width: 70%;
+}
