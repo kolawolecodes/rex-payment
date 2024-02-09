@@ -1,16 +1,14 @@
-import { Box, useTheme } from '@mui/material'
+import { useTheme } from '@mui/material'
 import React from 'react'
 import Package from './Package'
 import Footer from "../footer/Footer";
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import SearchSignIn from '../header_search_log/HeaderSearch';
-import SearchIcon from '@mui/icons-material/Search';
 
 
 
 
-function ThisHome({children}) {
+function Home() {
   const {palette} = useTheme();
   return (
     <div className='thisHome'>
@@ -60,14 +58,4 @@ function ThisHome({children}) {
   )
 }
 
-export default ThisHome
-
-{/* <Box className='footer_main_wrapper'
-    display= "flex"
-    gap= "20px"
-    paddingTop= "20px"
-    borderTop= "solid green"
-    width= "70%"
-    marginLeft= "120px"
-    >
-</Box> */}
+export default Home

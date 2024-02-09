@@ -14,7 +14,6 @@ import myCshap from "../../../images/c-sharp.png"
 import myJava from "../../../images/java.png"
 import myNode from "../../../images/node.png"
 import { Box, useTheme } from '@mui/material';
-import FlexBetween from '../../boxes_style/FlexBetween';
 import LibrariesContent from './LibrariesContent';
 import ErrorBox2 from '../../errorBox/ErrorBox2';
 

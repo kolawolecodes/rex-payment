@@ -6,7 +6,7 @@ import Footer from '../footer/Footer'
 import SideStep from './SideStep'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import { overviewsteps4, overviewsteps5, testModes } from '../../data/sideStepData'
+import { overviewsteps5, testModes } from '../../data/sideStepData'
 import Title_Details from './Title_Details'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Example from '../../errorBox/Example'

@@ -1,9 +1,7 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import ThisHome from "./components/pages/home/ThisHome"
 import { useMemo } from "react"
 import { themeSettings } from "./theme"
-import SearchSignIn from "./components/pages/header_search_log/HeaderSearch"
 import QuickStart from "./components/pages/home/QuickStart"
 import Authentication from "./components/pages/home/Authentication"
 import PaymentMethod from "./components/pages/home/PaymentMethod"
@@ -12,8 +10,9 @@ import FrontEnd from "./components/pages/home/FrontEnd"
 import BackEnd from "./components/pages/home/BackEnd"
 import CreatePayment from "./components/pages/home/CreatePayment"
 import TransactionStatus from "./components/pages/home/TransactionStatus"
-import Sidebar from "./components/pages/sideBar/SideBar"
 import Mobile from "./components/pages/home/Mobile"
+import Home from "./components/pages/home/Home"
+import Sidebar from "./components/pages/home/SideBar"
 
 
 
@@ -28,7 +27,7 @@ function App() {
                 <ThemeProvider theme={theme}>
                   <CssBaseline/>
                   <Routes>
-                    <Route path="/" element={<ThisHome/>} />
+                    <Route path="/" element={<><Home/></>} />
                     <Route path="/quickStart" element={<QuickStart/>} />
                     <Route path="/authentication" element={<Authentication/>} />
                     <Route path="/paymentMethod" element={<PaymentMethod/>} />

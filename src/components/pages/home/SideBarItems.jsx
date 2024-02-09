@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function SideBarItems({item}) {
   const [open, setOpen] = useState(false);
@@ -8,11 +8,11 @@ function SideBarItems({item}) {
   return (
     <div class='side_item'>
       <div className='sidebar_title'>
-          <NavLink to={item.path} className="titleNav">
-            <span className='sideTitle' onClick={() => setOpen(!open)} >
-                {item.title}
-            </span>
-          </NavLink>
+        <NavLink to={item.path} className="titleNav">
+          <span className='sideTitle' onClick={() => setOpen(!open)} >
+              {item.title}
+          </span>
+        </NavLink>
       </div>
       <div id='sidebar_content' className={open ? " open" : ""}>
         {

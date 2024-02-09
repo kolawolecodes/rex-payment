@@ -1,17 +1,16 @@
-import React from 'react'
-import "./quickstart.css"
-import { Box, useTheme } from '@mui/material'
+import React from 'react';
+import "./quickstart.css";
+import { Box, useTheme } from '@mui/material';
 import Helpful from '../home/Helpful';
 import SideStep from './SideStep';
-import { overviewsteps1, step1, step2 } from "../../data/sideStepData"
+import { overviewsteps1, step1, step2 } from "../../data/sideStepData";
 import Footer from '../../pages/footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import Title_Details from './Title_Details'
-
+import Title_Details from './Title_Details';
 import ErrorIcon from '@mui/icons-material/Error';
 import ErrorBox from '../../errorBox/ErrorBox';
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
+import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
 import Steps from './Steps';
 import HeaderDetails from './HeaderDetails';
 

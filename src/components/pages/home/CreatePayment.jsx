@@ -6,7 +6,6 @@ import Footer from '../footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import Title_Details from './Title_Details'
-import FlexBetween from '../../boxes_style/FlexBetween'
 import { Box, useTheme } from '@mui/material'
 import { HandlingList, javaMessage, require4Sigle, require4multi, requirements, retrieveAPIKeys } from '../../data/sideStepData'
 import Requirement from './Requirement'
@@ -14,7 +13,6 @@ import HtmlJavaDashoard from './HtmlJavaDashoard'
 import ErrorBox2 from '../../errorBox/ErrorBox2'
 import Handling from './Handling'
 import JavaDashoard from './JavaDashboard'
-import ErrorIcon from '@mui/icons-material/Error';
 import WarningIcon from '@mui/icons-material/Warning';
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, HeadTitle, InnerPage4creat, SubContent } from '../../boxes_style/pageWrapper'
+import PageWrapper, { HeadContainer, InnerPage4creat, SubContent } from '../../boxes_style/pageWrapper'
 import HeaderDetails from './HeaderDetails'
 import Title_Details from './Title_Details'
 import ErrorBox from '../../errorBox/ErrorBox'

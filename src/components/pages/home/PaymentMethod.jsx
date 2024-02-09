@@ -5,13 +5,13 @@ import Footer from '../footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import SideStep from './SideStep';
-import { overviewsteps4, paymentMethods } from '../../data/sideStepData';
+import { overviewsteps4 } from '../../data/sideStepData';
 import Title_Details from './Title_Details';
 import ErrorBox from '../../errorBox/ErrorBox';
 import ErrorIcon from '@mui/icons-material/Error';
 import Example from '../../errorBox/Example';
 import { Box, useTheme } from '@mui/material';
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
+import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
 import HeaderDetails from './HeaderDetails';
 import PaymentOptions from './PaymentOptions';
 

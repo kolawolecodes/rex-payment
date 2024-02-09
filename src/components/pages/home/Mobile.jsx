@@ -1,5 +1,4 @@
 import React from 'react'
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../boxes_style/pageWrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
@@ -11,9 +10,7 @@ import myReact from "../../../images/react.png"
 import myFlutter from "../../../images/flutter.png"
 import myIonic from "../../../images/java.png"
 import { Box, useTheme } from '@mui/material';
-import FlexBetween from '../../boxes_style/FlexBetween';
 import LibrariesContent from './LibrariesContent';
-import ErrorBox2 from '../../errorBox/ErrorBox2';
 
 function Mobile() {
   return (

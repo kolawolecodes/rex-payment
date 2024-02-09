@@ -16,7 +16,6 @@ import MyList from './MyList';
 import { testModes } from '../../data/sideStepData';
 import RetrieveList from './RetrieveList';
 import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
-import Title_Details from './Title_Details';
 import HeaderDetails from './HeaderDetails';
 
 function Authentication() {
