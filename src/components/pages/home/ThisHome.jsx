@@ -4,7 +4,7 @@ import Package from './Package'
 import Footer from "../footer/Footer";
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import SearchSignIn from '../Header_search_log/HeaderSearch';
+import SearchSignIn from '../header_search_log/HeaderSearch';
 import SearchIcon from '@mui/icons-material/Search';
 
 

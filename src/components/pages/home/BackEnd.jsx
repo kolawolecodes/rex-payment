@@ -1,6 +1,6 @@
 import React from 'react'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../Boxes_style/pageWrapper'
+import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../boxes_style/pageWrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -14,7 +14,7 @@ import myCshap from "../../../images/c-sharp.png"
 import myJava from "../../../images/java.png"
 import myNode from "../../../images/node.png"
 import { Box, useTheme } from '@mui/material';
-import FlexBetween from '../../Boxes_style/FlexBetween';
+import FlexBetween from '../../boxes_style/FlexBetween';
 import LibrariesContent from './LibrariesContent';
 import ErrorBox2 from '../../errorBox/ErrorBox2';
 

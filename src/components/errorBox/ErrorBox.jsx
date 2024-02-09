@@ -1,6 +1,6 @@
 import { Box, useTheme } from '@mui/material';
 import React from 'react'
-import { ErrorBoxStyln, ErrorComment } from '../Boxes_style/ErrorBoxStyln';
+import { ErrorBoxStyln, ErrorComment } from '../boxes_style/ErrorBoxStyln';
 
 function ErrorBox({icon, message, errorTitle}) {
     const {palette} = useTheme();

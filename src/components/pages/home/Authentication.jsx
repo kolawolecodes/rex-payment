@@ -15,7 +15,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 import MyList from './MyList';
 import { testModes } from '../../data/sideStepData';
 import RetrieveList from './RetrieveList';
-import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../Boxes_style/pageWrapper';
+import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
 import Title_Details from './Title_Details';
 import HeaderDetails from './HeaderDetails';
 

@@ -1,6 +1,6 @@
 import { Box, useTheme } from '@mui/material'
 import React from 'react'
-import FlexBetween from '../../Boxes_style/FlexBetween'
+import FlexBetween from '../../boxes_style/FlexBetween'
 import styled from '@emotion/styled';
 import { javaMessage } from '../../data/sideStepData';
 

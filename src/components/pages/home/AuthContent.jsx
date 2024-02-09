@@ -1,6 +1,6 @@
 import { Box, useTheme } from '@mui/material'
 import React from 'react'
-import PageWrapper, { InnerPageContainer,  SubContent, SubTitle, SubTitleConte } from '../../Boxes_style/pageWrapper';
+import PageWrapper, { InnerPageContainer,  SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
 
 function AuthContent({title, decription, decription2, empty, decription3, children}) {
     const {palette} = useTheme();

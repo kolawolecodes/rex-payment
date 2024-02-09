@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../Boxes_style/pageWrapper'
+import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../boxes_style/pageWrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -8,7 +8,7 @@ import myReact from "../../../images/react.png"
 import myVue from "../../../images/vue.png"
 import myAngular from "../../../images/angular.png"
 import { Box, useTheme } from '@mui/material';
-import FlexBetween from '../../Boxes_style/FlexBetween';
+import FlexBetween from '../../boxes_style/FlexBetween';
 
 function FrontEnd() {
     const palette = useTheme();

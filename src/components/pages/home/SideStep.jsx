@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubContent, SubTitle, SubTitleConte } from '../../Boxes_style/pageWrapper'
+import { SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
 
 function SideStep({title, items, message}) {
     

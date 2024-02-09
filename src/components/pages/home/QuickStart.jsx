@@ -11,7 +11,7 @@ import Title_Details from './Title_Details'
 
 import ErrorIcon from '@mui/icons-material/Error';
 import ErrorBox from '../../errorBox/ErrorBox';
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../Boxes_style/pageWrapper';
+import PageWrapper, { HeadContainer, HeadContent, HeadTitle, InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
 import Steps from './Steps';
 import HeaderDetails from './HeaderDetails';
 

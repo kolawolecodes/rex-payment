@@ -1,12 +1,12 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, HeadTitle, InnerPage4creat, InnerPageContainer, SubContent } from '../../Boxes_style/pageWrapper'
+import PageWrapper, { HeadContainer, HeadTitle, InnerPage4creat, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Helpful from './Helpful'
 import Footer from '../footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import Title_Details from './Title_Details'
-import FlexBetween from '../../Boxes_style/FlexBetween'
+import FlexBetween from '../../boxes_style/FlexBetween'
 import { Box, useTheme } from '@mui/material'
 import { HandlingList, javaMessage, require4Sigle, require4multi, requirements, retrieveAPIKeys } from '../../data/sideStepData'
 import Requirement from './Requirement'

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import items from "../../data/data.json"
 import SideBarItems from '../sideBar/SideBarItems'
 import { Box, useTheme } from '@mui/material'
-import SearchSignIn from "../Header_search_log/HeaderSearch";
+import SearchSignIn from "../header_search_log/HeaderSearch";
 
  const SidebarStyle = styled(Box)({
    
