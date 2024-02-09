@@ -1,12 +1,12 @@
 {
-  "homepage": "https://kolawolecodes.github.io/rexpayapp",
+  "homepage": "https://kolawolecodes.github.io/rex_payment",
   "name": "rex_payment",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d directives",
+    "deploy":"gh-pages -d dest",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
