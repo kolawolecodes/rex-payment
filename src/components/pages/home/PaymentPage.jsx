@@ -21,7 +21,7 @@ function PaymentPage() {
         <InnerPageContainer>
             <HeadContainer>
                 <HeadTitle>
-                    <h1>paymentPage</h1>
+                    <h1>payment Page</h1>
                 </HeadTitle>
             </HeadContainer>
             <HeaderBody>

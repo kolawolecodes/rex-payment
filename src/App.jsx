@@ -28,7 +28,7 @@ function App() {
                 <ThemeProvider theme={theme}>
                   <CssBaseline/>
                   <Routes>
-                    <Route path="/" element={<><ThisHome/></>} />
+                    <Route path="/" element={<ThisHome/>} />
                     <Route path="/quickStart" element={<QuickStart/>} />
                     <Route path="/authentication" element={<Authentication/>} />
                     <Route path="/paymentMethod" element={<PaymentMethod/>} />

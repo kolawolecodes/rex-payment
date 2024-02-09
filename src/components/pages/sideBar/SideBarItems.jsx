@@ -8,7 +8,11 @@ function SideBarItems({item}) {
   return (
     <div class='side_item'>
       <div className='sidebar_title'>
-            <span onClick={() => setOpen(!open)} >{item.title}</span>
+          <NavLink to={item.path} className="titleNav">
+            <span className='sideTitle' onClick={() => setOpen(!open)} >
+                {item.title}
+            </span>
+          </NavLink>
       </div>
       <div id='sidebar_content' className={open ? " open" : ""}>
         {

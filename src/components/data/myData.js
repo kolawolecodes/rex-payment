@@ -2,11 +2,13 @@
 
 export const sideList = [
     {
-        "title": "Home"
+        "title": "Home",
+        "path": "/"
     },
 
     {
         "title": "Integrated Guide",
+        "path": "/quickStart",
         "childrens":
         [
             {
@@ -45,6 +47,7 @@ export const sideList = [
     
     {
         "title":"Accept Payment",
+        "path": "/paymentMethod",
         "childrens": 
         [
             {
@@ -61,6 +64,7 @@ export const sideList = [
 
     {
         "title":"SDKs and Plugins",
+        "path": "/frontend",
         "childrens": [
             {
                 "title": "Frontend Libraries",
@@ -88,7 +92,7 @@ export const sideList = [
 
             {
                 "title": "Direct Integeration",
-                "childrens": [
+                "childrens": [          
                     {
                         "title": "Create Payment",
                         "path": "/createpayment"
@@ -96,10 +100,6 @@ export const sideList = [
                     {
                         "title": "Insert public key",
                         "path": "/insertPublicKey"
-                    },
-                    {
-                        "title": "Create Payment",
-                        "path": "/createpayment"
                     },
                     {
                         "title": "Charge Card",

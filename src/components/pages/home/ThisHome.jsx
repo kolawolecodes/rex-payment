@@ -40,7 +40,7 @@ function ThisHome({children}) {
           />
           <Package 
               empty= "" 
-            title= "Collect Payment"
+            title= "Recurrent Payments"
             content= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eligendi."
           />
         </div>
