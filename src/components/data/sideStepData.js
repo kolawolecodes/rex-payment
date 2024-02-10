@@ -63,6 +63,21 @@ export const overviewsteps1 = [
         {title: "Encrypted keys", details:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis,fuga alias aliquam reiciendis minima perspiciatis voluptates assumenda?,", id: uuidv4()}
     ]
 
+    export const afterPayment = [
+        {
+            title: "We'll direct to your redirect_url with status, tx_ref and and transaction_id query"
+        },
+        {
+            title: "we will send you a webhook if you have that enabled. Learn more about webhooks and see examples here."
+        },
+        {
+            title: "We'll send you an email receipt to your customer if payment was successful (unless you have disabled that)"
+        },
+        {
+            title: "we will send you an email notification (unless you have disabled that)."
+        }
+    ]
+
     export const retrieveAPIKeys = [
         {title: "Log into RexPay account",  id: uuidv4()},
         {title: "Navigate to settings",  id: uuidv4()},

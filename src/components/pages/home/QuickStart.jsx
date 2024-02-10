@@ -10,7 +10,7 @@ import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import Title_Details from './Title_Details';
 import ErrorIcon from '@mui/icons-material/Error';
 import ErrorBox from '../../errorBox/ErrorBox';
-import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
+import  { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
 import Steps from './Steps';
 import HeaderDetails from './HeaderDetails';
 
@@ -21,7 +21,7 @@ function QuickStart({children}) {
   return (
     <PageWrapper className='quickStart'>
         {/* left hand side */}
-        <InnerPageContainer width="100%">
+        <InnerPageContainer>
             <HeadContainer>
                 <HeaderDetails
                     title="Quick Start"

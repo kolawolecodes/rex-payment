@@ -1,6 +1,6 @@
 import React from 'react'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/pageWrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -16,64 +16,61 @@ import myNode from "../../../images/node.png"
 import { Box, useTheme } from '@mui/material';
 import LibrariesContent from './LibrariesContent';
 import ErrorBox2 from '../../errorBox/ErrorBox2';
+import HeaderDetails from './HeaderDetails';
 
 function BackEnd() {
   return (
     <PageWrapper>
         <InnerPageContainer>
-            <HeadContainer>
-                <HeadTitle>
-                    <h1>SDKs for servers</h1>
-                </HeadTitle>
-                <HeadContent width="80%">
-                    <span>
-                        These libraries should be used on the frontend.
-                    </span>
+            <HeaderDetails 
+                title="SDKs for servers"
+            />
+            <span>
+                These libraries should be used on the frontend.
+            </span>
 
-                    {/* Error Prompt 2 */}
-                    <ErrorBox2
-                            icon={<ReportProblemIcon sx={{ fontSize:"2rem", color:"#660000", marginTop: "1rem"}}/>}
-                            errorTitle="Limited Support"
-                            message="Not all end points are supported by our SDKs yet. You'll see 
-                            a lisr of which endpoints are supported for each SDK in it's documentation, 
-                            if  you find an endpoint that's missing in your preffered SDK, send in a PR."
-                    />
-                </HeadContent>
+            {/* Error Prompt 2 */}
+            <ErrorBox2
+                icon={<ReportProblemIcon sx={{ fontSize:"2rem", color:"#660000", marginTop: "1rem"}}/>}
+                errorTitle="Limited Support"
+                message="Not all end points are supported by our SDKs yet. You'll see 
+                a lisr of which endpoints are supported for each SDK in it's documentation, 
+                if  you find an endpoint that's missing in your preffered SDK, send in a PR."
+            />
 
                 {/* Libraries */}
-                <HeaderBody marginTop="2rem">
-                    <LibrariesContent 
-                        image1={myNode}
-                        name1="Node.js"
-                        image2={myPhp}
-                        name2="PHP"
-                    />
+            <HeaderBody marginTop="1.5rem">
+                <LibrariesContent 
+                    image1={myNode}
+                    name1="Node.js"
+                    image2={myPhp}
+                    name2="PHP"
+                />
 
-                    <LibrariesContent 
-                        image1={myPython}
-                        name1="Python"
-                        image2={myRuby}
-                        name2="Ruby"
-                    />
+                <LibrariesContent 
+                    image1={myPython}
+                    name1="Python"
+                    image2={myRuby}
+                    name2="Ruby"
+                />
 
-                    <LibrariesContent 
-                        image1={myGo}
-                        name1="GO"
-                        image2={myCshap}
-                        name2="C#"
-                    />
+                <LibrariesContent 
+                    image1={myGo}
+                    name1="GO"
+                    image2={myCshap}
+                    name2="C#"
+                />
 
-                    <Box display= "flex" align-items= "center" width="50%" gap="0.5rem">
-                        <Box >
-                            <img  style={{width:"45px", height:"45px"}} src={myJava} alt="java" />
-                        </Box>
-
-                        <SubTitle style={{color:"red"}}>
-                            <h4>Java</h4>
-                        </SubTitle>
+                <Box display= "flex" align-items= "center" width="100%" gap="0.5rem">
+                    <Box >
+                        <img  style={{width:"45px", height:"45px"}} src={myJava} alt="java" />
                     </Box>
-                </HeaderBody>
-            </HeadContainer>
+
+                    <SubTitle style={{color:"red"}}>
+                        <h4>Java</h4>
+                    </SubTitle>
+                </Box>
+            </HeaderBody>
 
             {/* Helpful question */}
             <Helpful />

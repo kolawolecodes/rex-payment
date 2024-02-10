@@ -6,13 +6,13 @@ import Footer from '../footer/Footer'
 import SideStep from './SideStep'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import { overviewsteps5, testModes } from '../../data/sideStepData'
+import { afterPayment, overviewsteps5, testModes } from '../../data/sideStepData'
 import Title_Details from './Title_Details'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Example from '../../errorBox/Example'
 import AuthContent from './AuthContent'
 import MyList from './MyList'
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
 
 function PaymentPage() {
   return (
@@ -90,11 +90,14 @@ function PaymentPage() {
             <AuthContent 
                 title="Step 3: Redirect the user to the page Link"
                 decription="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                children={<MyList items={testModes}/>}
-                decription2="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Sint dolore obcaecati veniam perferendis id perspiciatis rem 
-                vero porro totam pariatur."
                 empty=""
+            />
+
+            <AuthContent 
+                title="Step 4: After the Payment"
+                decription="Four things will happen when payment is paid in full"
+                children={<MyList items={afterPayment}/>}
+                decription2="On your server, you should handle the redirect and always verify the final state of the transsaction."
             />
 
             <SubTitleConte>

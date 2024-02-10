@@ -1,11 +1,11 @@
 import { Box, useTheme } from '@mui/material'
-import React from 'react'
-import { InnerPageContainer,  SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
+import { InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
+
 
 function AuthContent({title, decription, decription2, empty, decription3, children}) {
     const {palette} = useTheme();
   return (
-    <InnerPageContainer>
+    <>
         <SubTitleConte>
             <SubTitle fontSize="0.8rem">
             <h2>{title}</h2>
@@ -38,7 +38,7 @@ function AuthContent({title, decription, decription2, empty, decription3, childr
             <span>{decription3}
             </span>
         </SubContent>
-    </InnerPageContainer>
+    </>
   )
 }
 

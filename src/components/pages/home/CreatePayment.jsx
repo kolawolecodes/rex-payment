@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, HeadTitle, InnerPage4creat, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadTitle, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Helpful from './Helpful'
 import Footer from '../footer/Footer'
@@ -7,7 +7,7 @@ import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import Title_Details from './Title_Details'
 import { Box, useTheme } from '@mui/material'
-import { HandlingList, javaMessage, require4Sigle, require4multi, requirements, retrieveAPIKeys } from '../../data/sideStepData'
+import { HandlingList, javaMessage, require4Sigle, require4multi, requirements } from '../../data/sideStepData'
 import Requirement from './Requirement'
 import HtmlJavaDashoard from './HtmlJavaDashoard'
 import ErrorBox2 from '../../errorBox/ErrorBox2'
@@ -20,16 +20,19 @@ function CreatePayment() {
     const {palette} = useTheme();
   return (
     <PageWrapper>
-        <InnerPage4creat width="60%">
+        <InnerPageContainer width="60%">
             <HeadContainer>
                 <HeadTitle fontSize="0.9rem" fontWeight="800">
                     <h1>Create Payment</h1>
                 </HeadTitle>
 
-                <ErrorBox 
-                    message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores delectus at 
-                    officiis. Provident magnam esse qui atque dolorum!"
-                />
+                <div style={{width:"100%"}}>
+                    <ErrorBox 
+                        message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores delectus at 
+                        officiis. Provident magnam esse qui atque dolorum!"
+                    />
+
+                </div>
 
                 <Title_Details 
                     title="Popup"
@@ -243,7 +246,7 @@ function CreatePayment() {
                 title2= "Video tutorials"
                 body2="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt."
             />
-        </InnerPage4creat>
+        </InnerPageContainer>
     </PageWrapper>
   )
 }

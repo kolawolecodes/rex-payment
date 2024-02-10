@@ -5,7 +5,7 @@ import { SubTitle } from '../../boxes_style/pageWrapper'
 
 function LibrariesContent({image1, name1, image2, name2}) {
   return (
-    <FlexBetween width="50%">
+    <FlexBetween width="80%">
         <Box display= "flex" align-items= "center" gap="1rem">
             <Box>
             <img style={{width:"60px"}} src={image1} alt={image1} />

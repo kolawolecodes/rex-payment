@@ -2,25 +2,26 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 
-const PageWrapper = styled(Box)({
+export const PageWrapper = styled(Box)({
     display: "flex",
-    width: "85%",
+    width: "90%",
     margin: "auto auto",
-    gap: "1.5rem",
+    gap: "1rem",
     color: "#0a1e36",
-    fontSize: "1rem"
+    fontSize: "1rem",
 });
 
 export const InnerPageContainer = styled(Box)({
     display: "flex",
     flexDirection: "column",
-    width: "90%",
-    gap: "1rem"
+    width: "70%",
+    gap: "1.5rem",
 });
 
 export const HeadContainer = styled(Box)({
-    marginTop: "1rem",
-    // display: "block",
+    marginTop: "1.5rem",
+    display: "block",
+    width: "100%",
 });
 
 export const HeadTitle = styled(Box)({
@@ -45,7 +46,8 @@ export const HeadContent = styled(Box)({
 export const SubTitleConte = styled(Box)({
     display: "flex",
     flexDirection: "column",
-    fontSize: "0.9rem",
+    width: "100%",
+    gap:"1rem"
 });
 
 export const SubTitle = styled(Box)({
@@ -56,21 +58,3 @@ export const SubTitle = styled(Box)({
 export const SubContent = styled(Box)({
     display: "block",
 });
-
-// export const ListedStepsContainer = styled(Box)({
-//     display: "flex",
-//     flexDirection: "column",
-//     width: "100%",
-//     gap: "1rem",
-// });
-
-export const InnerPage4creat = styled(Box)({
-    display: "flex",
-    flexDirection: "column",
-    width: "75%",
-    gap: "0.5rem",
-});
-
-
-
-export default PageWrapper

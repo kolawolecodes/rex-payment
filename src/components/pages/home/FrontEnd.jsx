@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, SubTitle } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/pageWrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';

@@ -11,7 +11,7 @@ import ErrorBox from '../../errorBox/ErrorBox';
 import ErrorIcon from '@mui/icons-material/Error';
 import Example from '../../errorBox/Example';
 import { Box, useTheme } from '@mui/material';
-import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
+import{ HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
 import HeaderDetails from './HeaderDetails';
 import PaymentOptions from './PaymentOptions';
 
@@ -28,7 +28,7 @@ function PaymentMethod() {
                     methods you are willing to accept from ypu customers."
                 />
 
-                <SubContent>
+                <SubContent margin="1.5rem 0 0 0">
                     <span>
                         To autorize API calls from your server, pass your secret key as a bearer token. 
                         The means passing an autorization header with a value of "Bearer: YOUR_SECRET_KEY".

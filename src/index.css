@@ -66,7 +66,7 @@ body::-webkit-scrollbar {
 .side_item {
   display: block;
   width: 12vw;
-  border-bottom: 0.1rem solid #ff9999;
+  /* border-bottom: 0.1rem solid #ff9999; */
   /* border: solid; */
 
 }
@@ -224,16 +224,12 @@ body::-webkit-scrollbar {
 }
 
 /* styling Right hand side */
-.right_hand_steps {
+.right_side_step {
   display:flex;
-  width: 17vw;
-}
-
-.rightHand_step_container {
-  width: 100%;
-  display: flex;
   flex-direction: column;
+  max-width: 20vw;
   justify-content: flex-start;
+  padding-left: 1rem;
 }
 
 .onPage_step_title {

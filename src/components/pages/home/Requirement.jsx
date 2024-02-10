@@ -1,6 +1,5 @@
 import React from 'react'
 import { SubTitleConte } from '../../boxes_style/pageWrapper'
-import FlexBetween from '../../boxes_style/FlexBetween'
 import { Box, useTheme } from '@mui/material'
 
 function Requirement({items}) {

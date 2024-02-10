@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper, { HeadContainer, InnerPage4creat, SubContent } from '../../boxes_style/pageWrapper'
+import { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper'
 import HeaderDetails from './HeaderDetails'
 import Title_Details from './Title_Details'
 import ErrorBox from '../../errorBox/ErrorBox'
@@ -11,7 +11,7 @@ import ShowResPdash from './ShowResPdash'
 function TransactionStatus() {
   return (
     <PageWrapper>
-        <InnerPage4creat width="60%">
+        <InnerPageContainer width="60%">
             <HeadContainer>
                 <HeaderDetails 
                     title="Get Transaction Title"
@@ -58,7 +58,7 @@ function TransactionStatus() {
                 natus, laudantium quod ab! A repudiandae, totam velit nihil minus cupiditate."
             />
 
-        </InnerPage4creat>
+        </InnerPageContainer>
     </PageWrapper>
   )
 }

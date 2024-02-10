@@ -15,20 +15,18 @@ import ErrorIcon from '@mui/icons-material/Error';
 import MyList from './MyList';
 import { testModes } from '../../data/sideStepData';
 import RetrieveList from './RetrieveList';
-import PageWrapper, { HeadContainer, InnerPageContainer, SubContent } from '../../boxes_style/pageWrapper';
+import { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
 import HeaderDetails from './HeaderDetails';
 
 function Authentication() {
     const {palette} = useTheme();
   return (
     <PageWrapper>
-        <InnerPageContainer width="100%">
-            <HeadContainer>
-                <HeaderDetails 
-                    title="Authentication"
-                    details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
-                />
-            </HeadContainer>
+        <InnerPageContainer>
+            <HeaderDetails 
+                title="Authentication"
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
+            />
             {/* Live N Test Mode */}
             <AuthContent 
                 title="Mode vs Live Mode Test"

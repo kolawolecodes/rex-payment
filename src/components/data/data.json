@@ -1,8 +1,4 @@
 [
-    {
-        "title": "Home",
-        "childrens":[]
-    },
 
     {
         "title": "Integrated Guide",
@@ -60,7 +56,6 @@
 
     {
         "title":"SDKs and Plugins",
-        "path": "/",
         "childrens": [
             {
                 "title": "Frontend Libraries",
@@ -91,15 +86,11 @@
             },
             {
                 "title": "Create Payment",
-                "path": "/createpaymet"
+                "path": "/createpayment"
             },
             {
                 "title": "Insert public key",
                 "path": "/insertPublicKey"
-            },
-            {
-                "title": "Create Payment",
-                "path": "/createpayment"
             },
             {
                 "title": "Charge Card",

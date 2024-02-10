@@ -11,7 +11,7 @@ function Footer({icon1, icon2, title1, title2, body1, body2 }) {
       paddingTop= "20px"
       borderTop= "2px solid"
       borderColor = {palette.grey[100]}
-      width= "70%"
+      width= "100%"
     >
       {/* left hand side */}
       <div className='footer_main_wrapper'>

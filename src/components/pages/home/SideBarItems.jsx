@@ -17,7 +17,7 @@ function SideBarItems({item}) {
       <div id='sidebar_content' className={open ? " open" : ""}>
         {
           item.childrens.map((child, index) => (
-            <NavLink to={child.path} className='NavLink'   key={index}>
+            <NavLink to={child.path} className="NavLink"  key={index}>
               <span id='sidebarSubcontent' className={open ? " open" : ""}>
                 {child.title}
               </span>

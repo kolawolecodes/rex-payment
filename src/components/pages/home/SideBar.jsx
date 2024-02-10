@@ -17,15 +17,15 @@ function Sidebar({children}) {
     <div className="sidebar_wrapper">
         <div className="sidebar">
           <SidebarStyle bgcolor={palette.grey[100]} >
-            <NavLink to="/" className="titleNav">
-            <span className='sideTitle'>
-              Home
-            </span>
-          </NavLink>
             <div className='sideBar_main_container'>
-            { 
-              items.map((item, index) => <SideBarItems key={index} item={item} />)
-            }  
+              <NavLink to="/" className="titleNav">
+              <span className='sideTitle'>
+                Home
+              </span>
+            </NavLink>
+              { 
+                items.map((item, index) => <SideBarItems key={index} item={item} />)
+              }  
           </div>
           </SidebarStyle>
         </div>
