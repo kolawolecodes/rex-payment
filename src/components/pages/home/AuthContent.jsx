@@ -1,5 +1,5 @@
 import { Box, useTheme } from '@mui/material'
-import { InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper';
+import { InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/page_wrapper';
 
 
 function AuthContent({title, decription, decription2, empty, decription3, children}) {

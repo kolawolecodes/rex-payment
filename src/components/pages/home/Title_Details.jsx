@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
+import { SubContent, SubTitle, SubTitleConte } from '../../boxes_style/page_wrapper'
 
 function Title_Details({title, details}) {
   return (

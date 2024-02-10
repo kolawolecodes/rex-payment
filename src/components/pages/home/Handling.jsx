@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubTitleConte } from '../../boxes_style/pageWrapper'
+import { SubTitleConte } from '../../boxes_style/page_wrapper'
 import { Box, useTheme } from '@mui/material'
 
 function Handling({items}) {

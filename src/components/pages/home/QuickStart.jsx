@@ -10,7 +10,7 @@ import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import Title_Details from './Title_Details';
 import ErrorIcon from '@mui/icons-material/Error';
 import ErrorBox from '../../errorBox/ErrorBox';
-import  { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
+import  { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper';
 import Steps from './Steps';
 import HeaderDetails from './HeaderDetails';
 

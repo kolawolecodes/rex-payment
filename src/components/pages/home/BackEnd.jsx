@@ -1,6 +1,6 @@
 import React from 'react'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/pageWrapper'
+import { HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/page_wrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';

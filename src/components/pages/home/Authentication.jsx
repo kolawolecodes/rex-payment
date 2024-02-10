@@ -15,7 +15,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 import MyList from './MyList';
 import { testModes } from '../../data/sideStepData';
 import RetrieveList from './RetrieveList';
-import { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
+import { InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper';
 import HeaderDetails from './HeaderDetails';
 
 function Authentication() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import FlexBetween from '../../boxes_style/FlexBetween'
 import { Box } from '@mui/material'
-import { SubTitle } from '../../boxes_style/pageWrapper'
+import { SubTitle } from '../../boxes_style/page_wrapper'
 
 function LibrariesContent({image1, name1, image2, name2}) {
   return (

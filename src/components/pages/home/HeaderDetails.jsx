@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderBody, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
+import { HeaderBody, SubTitle, SubTitleConte } from '../../boxes_style/page_wrapper'
 
 function HeaderDetails({title, details}) {
   return (

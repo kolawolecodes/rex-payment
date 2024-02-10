@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadContainer, HeadTitle, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadTitle, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Helpful from './Helpful'
 import Footer from '../footer/Footer'

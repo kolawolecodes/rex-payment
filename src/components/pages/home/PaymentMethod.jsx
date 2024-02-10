@@ -11,7 +11,7 @@ import ErrorBox from '../../errorBox/ErrorBox';
 import ErrorIcon from '@mui/icons-material/Error';
 import Example from '../../errorBox/Example';
 import { Box, useTheme } from '@mui/material';
-import{ HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/pageWrapper';
+import{ HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper';
 import HeaderDetails from './HeaderDetails';
 import PaymentOptions from './PaymentOptions';
 
