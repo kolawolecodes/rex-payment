@@ -12,7 +12,7 @@ import ErrorBox from '../../errorBox/ErrorBox'
 import Example from '../../errorBox/Example'
 import AuthContent from './AuthContent'
 import MyList from './MyList'
-import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/pageWrapper'
+import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/page_wrapper'
 
 function PaymentPage() {
   return (
