@@ -2,45 +2,30 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useMemo } from "react"
 import { themeSettings } from "./theme"
-import QuickStart from "./components/pages/home/QuickStart"
-import Authentication from "./components/pages/home/Authentication"
-import PaymentMethod from "./components/pages/home/PaymentMethod"
-import PaymentPage from "./components/pages/home/PaymentPage"
-import FrontEnd from "./components/pages/home/FrontEnd"
-import BackEnd from "./components/pages/home/BackEnd"
-import CreatePayment from "./components/pages/home/CreatePayment"
-import TransactionStatus from "./components/pages/home/TransactionStatus"
-import Mobile from "./components/pages/home/Mobile"
-import Home from "./components/pages/home/Home"
+// import QuickStart from "./components/pages/home/QuickStart"
+// import Authentication from "./components/pages/home/Authentication"
+// import PaymentMethod from "./components/pages/home/PaymentMethod"
+// import PaymentPage from "./components/pages/home/PaymentPage"
+// import FrontEnd from "./components/pages/home/FrontEnd"
+// import BackEnd from "./components/pages/home/BackEnd"
+// import CreatePayment from "./components/pages/home/CreatePayment"
+// import TransactionStatus from "./components/pages/home/TransactionStatus"
+// import Mobile from "./components/pages/home/Mobile"
+// import Home from "./components/pages/home/Home"
 import Sidebar from "./components/pages/home/SideBar"
+import MainPage from "./components/pages/home/MainPage"
 
 
 
-// const theme = useMemo(() => createTheme(themeSettings), [])
 function App() {
-  const theme = useMemo(() => createTheme(themeSettings), []);
+  // const theme = useMemo(() => createTheme(themeSettings), []);
     return (
       <div className='app'>
           <BrowserRouter>
-            <Sidebar>
-              
-                <ThemeProvider theme={theme}>
-                  <CssBaseline/>
-                  <Routes>
-                    <Route path="/" element={<><Home/></>} />
-                    <Route path="/quickStart" element={<QuickStart/>} />
-                    <Route path="/authentication" element={<Authentication/>} />
-                    <Route path="/paymentMethod" element={<PaymentMethod/>} />
-                    <Route path="/paymentPage" element={<PaymentPage/>} />
-                    <Route path="/frontend" element={<FrontEnd/>} />
-                    <Route path="/backend" element={<BackEnd/>} />
-                    <Route path="/mobile" element={<Mobile/>} />
-                    <Route path="/createpayment" element={<CreatePayment/>} />
-                    <Route path="/transstatus" element={<TransactionStatus/>} />
-                  </Routes>
-                </ThemeProvider>
-             
-            </Sidebar>
+                {/* <ThemeProvider theme={theme}> */}
+                  {/* <CssBaseline/> */}
+                  <MainPage />
+                {/* </ThemeProvider> */}
           </BrowserRouter>
       </div>  
     )

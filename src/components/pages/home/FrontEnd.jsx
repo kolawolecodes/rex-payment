@@ -63,17 +63,7 @@ function FrontEnd() {
 
             {/* Helpful question */}
             <Helpful />
-
-            {/* footer */}
-            <Footer 
-                icon1= {<ForumIcon sx={{fontSize: "1.2rem"}} />}
-                title1= "Have any questions?"
-                body1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt."
-
-                icon2= {<SmartDisplayIcon sx={{fontSize: "1.2rem"}} />}
-                title2= "Video tutorials"
-                body2="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt."
-            />
+            
         </InnerPageContainer>
     </PageWrapper>
   )

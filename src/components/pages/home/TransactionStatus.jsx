@@ -7,6 +7,7 @@ import ErrorBox2 from '../../errorBox/ErrorBox2'
 import ErrorIcon from '@mui/icons-material/Error';
 import WarningIcon from '@mui/icons-material/Warning';
 import ShowResPdash from './ShowResPdash'
+import Helpful from './Helpful'
 
 function TransactionStatus() {
   return (
@@ -57,6 +58,9 @@ function TransactionStatus() {
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit, 
                 natus, laudantium quod ab! A repudiandae, totam velit nihil minus cupiditate."
             />
+
+            {/* Helpful question */}
+            <Helpful />
 
         </InnerPageContainer>
     </PageWrapper>

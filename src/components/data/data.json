@@ -1,4 +1,9 @@
 [
+    {
+        "title": "Home",
+        "path": "/",
+        "childrens": []
+    },
 
     {
         "title": "Integrated Guide",

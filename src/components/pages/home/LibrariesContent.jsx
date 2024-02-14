@@ -21,7 +21,7 @@ function LibrariesContent({image1, name1, image2, name2}) {
             <img style={{width:"60px"}} src={image2} alt={image2} />
             </Box>
 
-            <SubTitle style={{color:"red"}}>
+            <SubTitle style={{color:"#ff3333"}}>
                 <h4>{name2}</h4>
             </SubTitle>
         </Box>

@@ -1,8 +1,7 @@
-import React from 'react';
+import myVideo from "../../../images/bandicam 2023-11-17 19-13-23-648.mp4"
 import "./quickstart.css";
-import { Box, useTheme } from '@mui/material';
+import {useTheme } from '@mui/material';
 import Helpful from '../home/Helpful';
-import SideStep from './SideStep';
 import { overviewsteps1, step1, step2 } from "../../data/sideStepData";
 import Footer from '../../pages/footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -13,11 +12,11 @@ import ErrorBox from '../../errorBox/ErrorBox';
 import  { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper';
 import Steps from './Steps';
 import HeaderDetails from './HeaderDetails';
+import ReactPlayer from "react-player"
+import { forwardRef} from "react";
+import SideStep from "./SideStep";
 
-
-function QuickStart({children}) {
-    const {palette} = useTheme();
-
+function QuickStart() {
   return (
     <PageWrapper className='quickStart'>
         {/* left hand side */}
@@ -30,18 +29,19 @@ function QuickStart({children}) {
                 />
             </HeadContainer>
             {/* step 1 */}
-            <Title_Details
+            <Title_Details 
                 title="Step 1. Create Account"
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia 
                 maiores saepe asperiores nemo quibusdam harum nesciunt fugit laboriosam aperiam?"
             />
 
             {/* attached video */}
-            <Box className='step_video'>
+            <ReactPlayer width= "600px" height= "337.50px" margin= "2rem 0 2rem 0" url="{myVideo}" controls={true} />
+            {/* <Box className='step_video'>
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CWEWBgVwFc8?si=jD5_5zohv21C9RLg" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                 picture-in-picture; web-share" allowfullscreen></iframe>
-            </Box>
+            </Box> */}
 
             <SubContent className='step_step_by_step_container'>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -80,7 +80,7 @@ function QuickStart({children}) {
 
             {/* step 3 */}
 
-            <Title_Details
+            <Title_Details 
                 title="Step 3. Create an Account"
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia 
                 maiores saepe asperiores nemo quibusdam harum nesciunt fugit laboriosam aperiam?"
@@ -89,19 +89,10 @@ function QuickStart({children}) {
             {/* Helpful question */}
             <Helpful />
 
-            {/* footer layer */}
-            <Footer 
-                icon1= {<ForumIcon sx={{fontSize: "1.2rem"}} />}
-                title1= "Have any questions?"
-                body1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt."
-
-                icon2= {<SmartDisplayIcon sx={{fontSize: "1.2rem"}} />}
-                title2= "Video tutorials"
-                body2="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt."
-            />
+            
         </InnerPageContainer>
         {/* Right hand side */}
-        <SideStep 
+        <SideStep
             title="On this Page" 
             items= {overviewsteps1}
         />
@@ -109,4 +100,4 @@ function QuickStart({children}) {
   )
 }
 
-export default QuickStart
+export default QuickStart 

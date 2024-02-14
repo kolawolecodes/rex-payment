@@ -1,30 +1,30 @@
 import React from 'react'
 import "./footer.css"
 import { Box, useTheme } from '@mui/material'
+import ForumIcon from '@mui/icons-material/Forum';
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 
-function Footer({icon1, icon2, title1, title2, body1, body2 }) {
+function Footer() {
   const {palette} = useTheme();
   return (
     <Box className='footer'
       display= "flex"
-      gap= "20px"
-      paddingTop= "20px"
-      borderTop= "2px solid"
       borderColor = {palette.grey[100]}
-      width= "100%"
-    >
+      width= "80%"
+      margin="auto 0 1rem 3rem"
+      >
       {/* left hand side */}
       <div className='footer_main_wrapper'>
           <div className='footer_title_container'>
               <div className='footer_icon'>
-                  {icon1}
+                <ForumIcon  color="blue" sx={{fontSize: "1.2rem", color:"#ff3333"}} />
               </div>
               <div className='footer_title'>
-                  <span>{title1}</span>
+                  <span>Have any questions?</span>
               </div>
           </div>
           <div className='footer_body'>
-            {body1}
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.</span>
           </div>
       </div>
 
@@ -32,14 +32,14 @@ function Footer({icon1, icon2, title1, title2, body1, body2 }) {
       <div className='footer_main_wrapper'>
           <div className='footer_title_container'>
               <div className='footer_icon'>
-                  {icon2}
+                <SmartDisplayIcon sx={{fontSize: "1.2rem", color:"#ff3333"}} />
               </div>
               <div className='footer_title'>
-                  <span>{title2}</span>
+                  <span>Video tutorials</span>
               </div>
           </div>
           <div className='footer_body'>
-            {body2}
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.</span>
           </div>
       </div>
     </Box>
