@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/page_wrapper'
+import { HeadContainer, HeadContent, HeadTitle, HeaderBody, InnerPageContainer, Librarywrapper, PageWrapper, SubTitle } from '../../boxes-style/page_wrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -7,59 +7,48 @@ import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import myReact from "../../../images/react.png"
 import myVue from "../../../images/vue.png"
 import myAngular from "../../../images/angular.png"
-import { Box, useTheme } from '@mui/material';
-import FlexBetween from '../../boxes_style/FlexBetween';
+import { useTheme } from '@mui/material';
+import FlexBetween from '../../boxes-style/FlexBetween';
+import { styled } from '@mui/material/styles';
+import LibrariesContent from './LibrariesContent';
+import HeaderDetails from './HeaderDetails';
+
+
+export const Homeheader = styled("div")(({ theme }) => ({
+    display: "inline-block",
+    padding:"1rem",
+    marginTop: "1rem",
+    marginBottom:"-1rem"
+    
+  }));
 
 function FrontEnd() {
     const palette = useTheme();
   return (
     <PageWrapper>
         <InnerPageContainer>
-            <HeadContainer>
-                <HeadTitle>
-                    <h1>SDKs for client</h1>
-                </HeadTitle>
-                <HeadContent>
-                    <span>
-                        These libraries should be used on the frontend.
-                    </span>
-                </HeadContent>
+        <HeaderDetails 
+                title="SDKs for Client"
+                details="These libraries should be used on the frontend."
+            />
 
                 {/* Libraries */}
-                <HeaderBody marginTop="1.5rem">
-                    <FlexBetween width="50%">
-                        <Box display= "flex" align-items= "center" gap="1rem">
-                            <Box>
-                                <img style={{width:"80px", height:"80px"}} src={myReact} alt="React_logo" />
-                            </Box>
+                <Librarywrapper>
+                        <FlexBetween  padding="0 3rem 0 1rem" color="red">
+                            <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayReact/tree/main/rexpay-doc'>
+                                <LibrariesContent image={myReact} name="ReactJs"/>
+                            </a>
+                            <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayPHP'>
+                                <LibrariesContent image={myVue} name="VueJs/Nuxt"/>        
+                            </a>
+                        </FlexBetween>
 
-                            <SubTitle style={{color:"red"}}>
-                                <h3 >React</h3>
-                            </SubTitle>
-                        </Box>
-
-                        <Box display= "flex" align-items="center" gap="0.5rem">
-                            <Box>
-                                <img  style={{width:"80px", height:"80px"}} src={myVue} alt="Vue_logo" />
-                            </Box>
-
-                            <SubTitle style={{color:"red"}}>
-                                <h3>Vie</h3>
-                            </SubTitle>
-                        </Box>
-                    </FlexBetween>
-                    {/* Angular */}
-                    <Box display= "flex" align-items= "center" width="50%" gap="1rem">
-                        <Box padding="0.5rem">
-                            <img  style={{width:"60px", height:"60px"}} src={myAngular} alt="Vue_logo" />
-                        </Box>
-
-                        <SubTitle style={{color:"red"}}>
-                            <h3>Angular</h3>
-                        </SubTitle>
-                    </Box>
-                </HeaderBody>
-            </HeadContainer>
+                        <FlexBetween padding="0 3rem 0 1rem">
+                            <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayAngular '>
+                                <LibrariesContent  image={myAngular} name="Angular"/>
+                            </a>
+                        </FlexBetween>    
+                    </Librarywrapper>
 
             {/* Helpful question */}
             <Helpful />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadContainer, HeadTitle, HeaderBody, InnerPageContainer, PageWrapper, SubTitle } from '../../boxes_style/page_wrapper'
+import { HeadContainer, HeadTitle, HeaderBody, InnerPageContainer, Librarywrapper, PageWrapper, SubTitle } from '../../boxes-style/page_wrapper'
 import Footer from '../footer/Footer'
 import Helpful from './Helpful'
 import ForumIcon from '@mui/icons-material/Forum';
@@ -11,48 +11,48 @@ import myFlutter from "../../../images/flutter.png"
 import myIonic from "../../../images/java.png"
 import { Box, useTheme } from '@mui/material';
 import LibrariesContent from './LibrariesContent';
+import Heading from '../../utilities/Heading';
+import FlexBetween from '../../boxes-style/FlexBetween';
 
 function Mobile() {
   return (
     <PageWrapper>
         <InnerPageContainer>
-            <HeadContainer>
-                <HeadTitle>
-                    <h1>SDKs for mobile apps</h1>
-                </HeadTitle>
 
-                {/* Libraries */}
-                <HeaderBody marginTop="2rem">
-                    <LibrariesContent 
-                        image1={myAndroid}
-                        name1="Android"
-                        image2={myIos}
-                        name2="iOS"
-                    />
+            <Heading 
+            title="RexPay Documentation" 
+            />
+            {/* Libraries */}
 
-                    <LibrariesContent 
-                        image1={myReact}
-                        name1="React Native"
-                        image2={myFlutter}
-                        name2="Flutter"
-                    />
+            <Librarywrapper>
+                <FlexBetween  padding="0 3rem 0 1rem">
+                    <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayReact/tree/main/rexpay-doc'>
+                        <LibrariesContent image={myAndroid} name="Android"/>
+                    </a>
+                    <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayFlutter/tree/master '>
+                        <LibrariesContent image={myIos} name="iOS"/>        
+                    </a>
+                </FlexBetween>
 
+                <FlexBetween padding="0 3rem 0 1rem">
+                <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayReact/tree/main/rexpay-doc'>
+                    <LibrariesContent  image={myReact} name="React Native"/>
+                </a>
+                <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayFlutter/tree/master'>
+                    <LibrariesContent image={myFlutter}  name="Flutter" />
+                </a>
+                </FlexBetween>
 
-                    <Box display= "flex" align-items= "center" width="50%" gap="0.5rem">
-                        <Box >
-                            <img  style={{width:"45px", height:"45px"}} src={myIonic} alt="java" />
-                        </Box>
-
-                        <SubTitle style={{color:"red"}}>
-                            <h4>Ionic</h4>
-                        </SubTitle>
-                    </Box>
-                </HeaderBody>
-            </HeadContainer>
+                <FlexBetween padding="0 3rem 0 1rem">
+                <a target='_blank' rel='noreferrer' href='https://github.com/accelerex-developer/RexPayReact/tree/main/rexpay-doc'>
+                    <LibrariesContent image={myIonic} name="Ionic"/>
+                </a>
+                </FlexBetween>    
+            </Librarywrapper>
 
             {/* Helpful question */}
             <Helpful />
-            
+
         </InnerPageContainer>
     </PageWrapper>
   )

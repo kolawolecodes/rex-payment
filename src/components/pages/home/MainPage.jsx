@@ -1,28 +1,34 @@
-import React, { useMemo } from 'react'
-import Sidebar from './SideBar'
-import InnerMainPage from './InnerMainPage'
-import SearchSignIn from '../header_search_log/HeaderSearch'
-import Footer from '../footer/Footer'
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
-import { themeSettings } from "../../../theme"
+import { Box, styled } from '@mui/material';
+import React from 'react'
+import SearchSignIn from '../header-search-log/HeaderSearch';
+import InnerMainPage from './InnerMainPage';
+import Footer from '../footer/Footer';
+
+export const Mainpagewrap = styled(Box)(({ theme }) =>({
+    position:"relative",
+    display:"flex",
+    flexDirection:"column",
+    // flex: 1,
+    width:"80%",
+    marginLeft:"20%",
+    height:"100%",
+    overflowX:"hidden",
+  
+    [theme.breakpoints.down("sm")]: {  width:"100%", margin:"0", overflowX: "hidden", overflowY: "auto", "&::-webkit-scrollbar": {display:"none"} },
+   
+}));
+  
+
 
 function MainPage() {
-    const theme = useMemo(() => createTheme(themeSettings), []);
-  return (
-    <div className='mainpage'>
-            <section>
-                <Sidebar />
-            </section>
 
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <section  style={{ width:"100%", height:"auto", display:"flex", flexDirection:"column"}}>
-                <SearchSignIn />
-                <InnerMainPage />
-                <Footer />
-            </section>
-        </ThemeProvider>
-    </div>
+  
+  return (
+        <Mainpagewrap>
+             <SearchSignIn />
+            <InnerMainPage/>
+            <Footer/>
+        </Mainpagewrap>
   )
 }
 

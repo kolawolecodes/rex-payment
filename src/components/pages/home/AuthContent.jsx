@@ -1,20 +1,16 @@
 import { Box, useTheme } from '@mui/material'
-import { InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes_style/page_wrapper';
+import { InnerPageContainer, SubContent, SubTitle, SubTitleConte } from '../../boxes-style/page_wrapper';
 
 
 function AuthContent({title, decription, decription2, empty, decription3, children}) {
     const {palette} = useTheme();
   return (
     <>
-        <SubTitleConte>
-            <SubTitle fontSize="0.8rem">
+        <SubTitle fontSize="0.8rem">
             <h2>{title}</h2>
-            </SubTitle>
-        </SubTitleConte>
+        </SubTitle>
         <SubContent>
-            <span>
-                {decription}
-            </span>
+            {decription}
         </SubContent>
         <SubContent>
             {children}
@@ -23,9 +19,7 @@ function AuthContent({title, decription, decription2, empty, decription3, childr
            /> */}
         </SubContent>
         <SubContent className='testMode_descrpt'>
-            <span>
-                {decription2}
-            </span>
+            {decription2}
         </SubContent>
         <Box className='testMode_pic_container'
             width="100%"
@@ -35,8 +29,7 @@ function AuthContent({title, decription, decription2, empty, decription3, childr
             {empty}
         </Box>
         <SubContent>
-            <span>{decription3}
-            </span>
+            {decription3} 
         </SubContent>
     </>
   )

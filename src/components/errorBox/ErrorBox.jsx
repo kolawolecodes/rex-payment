@@ -1,23 +1,17 @@
 import { Box, useTheme } from '@mui/material';
 import React from 'react'
-import { ErrorBoxStyln, ErrorComment } from '../boxes_style/ErrorBoxStyln';
+import { Errorboxstyln, Errorcomment } from '../boxes-style/Errorboxstyln';
+// import { Errorboxstyln, Errorcomment } from '../boxes-style/Errorboxstyln';
 
-function ErrorBox({icon, message, errorTitle}) {
+function ErrorBox({icon, message}) {
     const {palette} = useTheme();
   return (
-    <Box bgcolor={palette.grey[100]} className='errorWrapper'>
-    <div style={{marginTop:"0.5rem"}} className='errorContainer'>
-        <div>
-            <span>{icon}</span>
-        </div>
-        <div className='errorDetailsContainer'>
-            <div>
-                <h4>{errorTitle}</h4>
-            </div>
-            <span className='errorMessage'>{message}</span>
-        </div>
-    </div>
-  </Box>
+    <Errorboxstyln bgcolor={palette.grey[100]}>
+            {icon}
+        <Errorcomment className='errorDetailsContainer'>
+            {message}
+        </Errorcomment>
+  </Errorboxstyln>
   
   )
 }

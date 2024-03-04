@@ -4,45 +4,51 @@ import { Box, useTheme } from '@mui/material'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 
+
+import { FooterBody, FooterConainer, FooterMainWrap, FooterTitle, FooterTitleCont, FooterWrap, Footerbodycontent } from '../../style/FooterStyle';
+
+
+
 function Footer() {
   const {palette} = useTheme();
-  return (
-    <Box className='footer'
-      display= "flex"
-      borderColor = {palette.grey[100]}
-      width= "80%"
-      margin="auto 0 1rem 3rem"
-      >
-      {/* left hand side */}
-      <div className='footer_main_wrapper'>
-          <div className='footer_title_container'>
-              <div className='footer_icon'>
-                <ForumIcon  color="blue" sx={{fontSize: "1.2rem", color:"#ff3333"}} />
-              </div>
-              <div className='footer_title'>
-                  <span>Have any questions?</span>
-              </div>
-          </div>
-          <div className='footer_body'>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.</span>
-          </div>
-      </div>
 
-      {/* right hand side */}
-      <div className='footer_main_wrapper'>
-          <div className='footer_title_container'>
-              <div className='footer_icon'>
-                <SmartDisplayIcon sx={{fontSize: "1.2rem", color:"#ff3333"}} />
-              </div>
-              <div className='footer_title'>
-                  <span>Video tutorials</span>
-              </div>
-          </div>
-          <div className='footer_body'>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.</span>
-          </div>
-      </div>
-    </Box>
+  return (
+    <FooterWrap
+      sx={{borderTop: "0.03rem solid #cfd3d9", }}
+    >
+      {/* left hand side */}
+      <FooterConainer
+      >
+        <FooterMainWrap >
+          <FooterTitleCont >
+            <ForumIcon   sx={{fontSize: "1.2rem", color:"#ff3333"}} />
+            <FooterTitle >
+              Have any questions
+            </FooterTitle>
+          </FooterTitleCont>
+          <FooterBody>
+            <Footerbodycontent>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.
+            </Footerbodycontent>
+          </FooterBody>
+        </FooterMainWrap>
+
+        {/* right hand side */}
+        <FooterMainWrap >
+          <FooterTitleCont>
+              <SmartDisplayIcon sx={{fontSize: "1.2rem", color:"#ff3333"}} />
+              <FooterTitle >
+                Video tutorial
+              </FooterTitle>
+          </FooterTitleCont>
+          <FooterBody >
+              <Footerbodycontent>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, deserunt.
+              </Footerbodycontent>
+          </FooterBody>
+        </FooterMainWrap>
+      </FooterConainer>
+    </FooterWrap>
   )
 }
 

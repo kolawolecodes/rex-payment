@@ -18,31 +18,31 @@ export const step2 = [
 ];
 
 export const overviewsteps1 = [
-        {title: "Create an Account", id: uuidv4()},
-        {title: "Configure your integration", id: uuidv4()},
+        {title: "Create an Account", id: 1},
+        {title: "Configure your integration", id: 2},
         {title: "Complete your KYC", id: uuidv4()},
-        {title: "Go live and accept payment from your user", id: uuidv4()},
+        {title: "Go live and accept payment from your user", id: 2},
     ]
 
     export const overviewsteps2 = [
-        {title: "Log into an Account", id: uuidv4()},
-        {title: "Configurate your integration", id: uuidv4()},
+        {title: "Log into an Account", id: 1},
+        {title: "Configurate your integration", id: 2},
         {title: "Complete your KYC", id: 3},
-        {title: "Go live and accept payment from your user", id: uuidv4()},
+        {title: "Go live and accept payment from your user", id: 4},
     ]
 
     export const overviewsteps3 = [
-        {title: "Test mode vs Live Mode", id: uuidv4()},
+        {title: "Test mode vs Live Mode", id: 1},
         {title: "API Keys", id: 2},
-        {title: "Retrieving your API Keys", id: uuidv4()},
-        {title: "Authorizing API calls", id: uuidv4()},
+        {title: "Retrieving your API Keys", id: 2},
+        {title: "Authorizing API calls", id: 3},
     ]
 
     export const overviewsteps4 = [
-        {title: "Account settings", id: uuidv4()},
-        {title: "Get a payment link", id: uuidv4()},
-        {title: "Redirect the user to the payment link", id: uuidv4()},
-        {title: "After the payment", id: uuidv4()},
+        {title: "Account settings", id: 1},
+        {title: "Get a payment link", id: 2},
+        {title: "Redirect the user to the payment link", id: 3},
+        {title: "After the payment", id: 4},
     ]
 
     export const overviewsteps5 = [
@@ -65,23 +65,23 @@ export const overviewsteps1 = [
 
     export const afterPayment = [
         {
-            title: "We'll direct to your redirect_url with status, tx_ref and and transaction_id query"
+            details: "We'll direct to your redirect_url with status, tx_ref and and transaction_id query"
         },
         {
-            title: "we will send you a webhook if you have that enabled. Learn more about webhooks and see examples here."
+            details: "we will send you a webhook if you have that enabled. Learn more about webhooks and see examples here."
         },
         {
-            title: "We'll send you an email receipt to your customer if payment was successful (unless you have disabled that)"
+            details: "We'll send you an email receipt to your customer if payment was successful (unless you have disabled that)"
         },
         {
-            title: "we will send you an email notification (unless you have disabled that)."
+            details: "we will send you an email notification (unless you have disabled that)."
         }
     ]
 
     export const retrieveAPIKeys = [
-        {title: "Log into RexPay account",  id: uuidv4()},
-        {title: "Navigate to settings",  id: uuidv4()},
-        {title: "Select the API Keys in the Development section to the menu to view and copy your keys.", id: uuidv4()}
+        {details: "Log into RexPay account",  id: uuidv4()},
+        {details: "Navigate to settings",  id: uuidv4()},
+        {details: "Select the API Keys in the Development section to the menu to view and copy your keys.", id: uuidv4()}
     ]
 
     export const installWithNpm = [

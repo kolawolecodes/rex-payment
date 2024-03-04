@@ -1,44 +1,46 @@
 import { Box, useTheme } from '@mui/material'
 import React from 'react'
-import FlexBetween from '../../boxes_style/FlexBetween'
+import FlexBetween from '../../boxes-style/FlexBetween'
 import styled from '@emotion/styled';
 import { javaMessage } from '../../data/sideStepData';
+import { ButtonWrapper, Buttonjava, Content, DashBordWrap, HtmlJavaStylin, MessageCont, MessageWrapper } from '../../style/DashboardStyles';
 
-const HtmlJavaStylin = styled(Box)({
-  width:"70%",
-  height: "270px",
- position: "relative",
-  border:"0.04rem solid",
-  borderRadius:"0.7rem",
-  display: "flex",
-  justifyContent:"center",
-  alignItems:"center",
-})
+// const HtmlJavaStylin = styled(Box)({
+//   width:"100%",
+//   height: "270px",
+//  position: "relative",
+//  lineHeight:"1.7rem",
+//   border:"0.04rem solid",
+//   borderRadius:"0.7rem",
+//   display: "flex",
+//   justifyContent:"center",
+//   alignItems:"center",
+// })
 
 function JavaDashoard({JavaScript, items }) {
   const { palette } = useTheme();
   return (
-    <div style={{marginTop:"1.5rem"}}>
-      <FlexBetween width="150px" margin="1rem 0 1.5rem 1.5rem" position="absolute">
-        <Box>
-            <span style={{color:"#cfd3d9"}}>{JavaScript}</span>
-        </Box>
-      </FlexBetween>
+    <DashBordWrap>
+      <ButtonWrapper>
+        <Buttonjava>
+            <Box color={palette.grey[400]}>{JavaScript}</Box>
+        </Buttonjava>
+      </ButtonWrapper>
       <HtmlJavaStylin borderColor={palette.grey[100]}>
-        <Box bgcolor={palette.grey[400]} color="#fff" width="90%" height="180px" display="flex" borderRadius="0.7rem"   margin="2rem 0 0 0">
-          <div style={{fontSize:"0.8rem", overflowY:"scroll", width:"85%", display:"inline-block", flexDirection:"column", gap: "0.7rem", justifyContent:"center", alignItems:"center", margin:"20px 20px"}}>
+        <MessageWrapper bgcolor={palette.grey[400]} >
+          <MessageCont>
             {
               javaMessage.map((item, index) => (
-                <div style={{marginLeft:"3rem"}} key={index}>
+                <Content  key={index}>
                   <span>{item.message}</span>
-                </div>
+                </Content>
               ))
             }
 
-          </div>
-        </Box>
+          </MessageCont>
+        </MessageWrapper>
       </HtmlJavaStylin>
-    </div>
+    </DashBordWrap>
   )
 }
 

@@ -1,25 +1,25 @@
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import ForumIcon from '@mui/icons-material/Forum';
-import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import { apiKeys, overviewsteps3, retrieveAPIKeys } from '../../data/sideStepData';
 import SideStep from './SideStep';
-import Footer from '../footer/Footer';
 import "./authentication.css"
-import { Box, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import ErrorBox from '../../errorBox/ErrorBox';
-import Example from '../../errorBox/Example';
 import Helpful from './Helpful';
-import AuthContent from '../home/AuthContent';
-import ErrorBox2 from '../../errorBox/ErrorBox2';
 import ErrorIcon from '@mui/icons-material/Error';
 import MyList from './MyList';
 import { testModes } from '../../data/sideStepData';
-import RetrieveList from './RetrieveList';
-import { InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper';
+import { ExampleContainer, ExampleContent, InnerPageContainer, PageWrapper, SubContent } from '../../boxes-style/page_wrapper';
 import HeaderDetails from './HeaderDetails';
+import NoteBox from '../../errorBox/NoteBox';
+import TitleDetails from './TitleDetails';
+import Empty from '../../utilities/Empty';
+import MyList2 from './MyList2';
 
 function Authentication() {
     const {palette} = useTheme();
+    const theme = useTheme();
+
+    const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <PageWrapper>
         <InnerPageContainer>
@@ -28,89 +28,142 @@ function Authentication() {
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
             />
             {/* Live N Test Mode */}
-            <AuthContent 
+            <TitleDetails
                 title="Mode vs Live Mode Test"
-                decription="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                children={<MyList items={testModes}/>}
-                decription2="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Sint dolore obcaecati veniam perferendis id perspiciatis rem 
-                vero porro totam pariatur."
-                empty=""
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             />
+            
+            <MyList items={testModes}/>
+            <SubContent>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sint dolore obcaecati veniam perferendis id perspiciatis rem 
+                vero porro totam pariatur.
+            </SubContent>
+            <Empty empty=""/>
+           
                 {/* API Keys */}
-            <AuthContent 
+            <TitleDetails
                 title="API Keys"
-                decription="When you create a Rex Pay account, you're given three kinds of API keys"
-                replaceThis="array"
-                children={<MyList items={apiKeys}/>}
+                details="When you create a Rex Pay account, you're given three kinds of API keys."
             />
 
+            <MyList items={apiKeys}/>
+           
+
             {/* Retrieving your API */}
-            <AuthContent 
+
+            <TitleDetails
                 title="Retrieve Your API keys"
-                decription="Your API keys are vital to making requests successful to 
+                details="Your API keys are vital to making requests successful to 
                 our servers. To get your  keys on testmode:"
-                children={<RetrieveList items={retrieveAPIKeys}/>}
-                empty=""
-                decription3="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis, 
-                fuga alias aliquam reiciendis minima perspiciatis voluptates assumenda?"
             />
+
+            <MyList2 items={retrieveAPIKeys}/>
+
+            <Empty empty=""/>
+
+            <SubContent>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis, 
+                fuga alias aliquam reiciendis minima perspiciatis voluptates assumenda
+            </SubContent>
+        
             {/* error handling */}
-            <ErrorBox2 
-                    icon={<ReportProblemIcon sx={{ fontSize:"2rem", color:"#660000", marginTop: "1rem"}}/>}
+            <NoteBox 
+                    icon={<ReportProblemIcon sx={(theme) => ({ 
+                        fontSize:"2rem", color:"#660000",
+                        [theme.breakpoints.down("sm")]: {fontSize:"1.5rem"}
+                    })}
+                    
+                    />}
                     message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit, 
                     natus velit ex in corrupti asperiores temporibus dolores dolorem incidunt, 
                     laudantium quod ab! A repudiandae, totam velit nihil minus cupiditate."
             />
 
             {/* Autorizing API */}
-                <AuthContent 
+                <TitleDetails 
                     title="Authorize API Calls"
-                    decription="All API calls on Rexpay are authenticated. API requests are made without 
+                    details="All API calls on Rexpay are authenticated. API requests are made without 
                     autorization will fail with the status code of 401:Utorized."
                 />
                 <ErrorBox 
-                    icon={<ErrorIcon sx={{ fontSize:"2rem", color:"#0d2543", marginTop: "1rem"}}/>}
+                    icon={<ErrorIcon sx={(theme) => ({
+                         fontSize:"2rem", color:"#0d2543",
+                        
+                         [theme.breakpoints.down("sm")]: {fontSize:"1.7rem"},
+
+                    })}
+                    />}
                     message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit, 
                     natus velit ex in corrupti asperiores temporibus dolores dolorem incidunt, 
                     laudantium quod ab! A repudiandae, totam velit nihil minus cupiditate."
                 />
 
                 <SubContent>
-                    <span>To autorize API calls from your server, pass your secret key as a bearer token. 
-                        The means passing an autorization header with a value of "Bearer: YOUR_SECRET_KEY".
-                        </span>
+                    To autorize API calls from your server, pass your secret key as a bearer token. 
+                    The means passing an autorization header with a value of "Bearer: YOUR_SECRET_KEY".
                 </SubContent>
-
+                        
                 {/* Example */}
-                <Example 
-                    messageHead = "For example, an API call look like this Node.js"
-                    message = "CONST RESPONSE = AWAIT GOT.POST(`HTTPS://API.FLUTTERWAVE.COM/V3/PAYMENTS)`"
-                />
+                <SubContent>
+                    For example, an API call look like this Node.js.
+                </SubContent>
+                <ExampleContainer bgcolor={palette.grey[400]}>
+                    <ExampleContent>
+                        <code>
+                            CONST RESPONSE = AWAIT GOT.POST&#40;"HTTPS://API.FLUTTERWAVE.COM/V3/PAYMENTS",&#123;
+                            <br />
+                            HEADERS&#58; <br />
+                            &nbsp; 
+                                &#123;AUTHORIZATION: `BEARER $&#123;PROCESS.ENV.FLW_SECRET_KEY&#125;`<br />
+                                &#125;, <br />
+                            JSON: &#123;<br />
+                            &nbsp;    // YOURPAYLOAD
+                            &#125; <br />
+                            &#125;&#41;;
+                        </code>
+                    </ExampleContent>
+                </ExampleContainer>
 
                 <SubContent>
-                    <span>
-                        If you're using one of our <span>backend SDKs</span>, you don't need to pass 
-                        the header manually; instead you will provide your keys when initializing the library.".
-                    </span>
+                    If you're using one of our <span>backend SDKs</span>, you don't need to pass 
+                    the header manually; instead you will provide your keys when initializing the library.".
                 </SubContent>
 
                 {/* Example 2 */}
-                <Example 
+
+                <ExampleContainer bgcolor={palette.grey[400]}>
+                    <ExampleContent>
+                        <code>
+                            INSTALL WITH: NPM | REXPAY-NODE-V3 
+                            <br />
+                            <br />
+                            CONST FLUTTERWAVE = REQUIRED&#40;'REXPAY-NODE-V3'&#41;;<br />
+                            CONST FLUTTERWAVE = REQUIRED&#40;PROCESS.ENV.FLW_PRODUCT_KEW_SECRET_KEY&#41;;<br />
+                            
+                            &nbsp; //SUBSEQUENT CALLS WILL AUTOMATICALLY HAVE THE HEADER ADDED <br />
+                            
+                            FLW.MISC.BVN&#40;&#123;BVN: "123456789010"&#125;&#41;<br />
+                            .THEN&#40;RESPONSE =&gt; CONSOLE.LOG&&#41;
+                        </code>
+                    </ExampleContent>
+                </ExampleContainer>
+                {/* <Example 
                     message = "//INSTALL WITH: NPM | REXPAY-NODE-V3 CONST FLUTTERWAVE = REQUIRED(PROCESS.ENV.FLW_PRODUCT_KEW_SECRET_KEY); //SUBSEQUENT CALLS WILL AUTOMATICALLY HAVE THE HEADER ADDED FLW.MISC.BVN({BVN:`123456789010`}).THEN(RESPONSE => CONSOLE.LOG(RESPONSE)"
                 />  
-                        
+                         */}
                 {/* Helpful question */}
                 <Helpful />
         </InnerPageContainer>
         
         {/* Right hand side */}
-        <div>
+
+        { !matches &&
             <SideStep 
                 title="On this Page" 
                 items= {overviewsteps3}
             />
-        </div>
+        }
     </PageWrapper>
   )
 }

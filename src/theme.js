@@ -1,19 +1,6 @@
 export const tokens = {
 
 
-  red: {
-      100: "#ffcccc",
-      200: "#ff9999",
-      300: "#ff6666",
-      400: "#ff3333",
-      500: "#ff0000",
-      600: "#cc0000",
-      700: "#990000",
-      800: "#660000",
-      900: "#330000"
-},
-
-
   orange: {
       100: "#fdeded",
       200: "#fbdbdb",
@@ -52,16 +39,16 @@ export const tokens = {
           900: "#010204"
       },
     secondary: {
-      // yellow
-      100: "#fcf0dd",
-      200: "#fae1bb",
-      300: "#f7d299",
-      400: "#f5c377",
-      500: "#f2b455",
-      600: "#c29044",
-      700: "#916c33",
-      800: "#614822",
-      900: "#302411",
+      // red
+      100: "#ffcccc",
+      200: "#ff9999",
+      300: "#ff6666",
+      400: "#ff3333",
+      500: "#ff0000",
+      600: "#cc0000",
+      700: "#990000",
+      800: "#660000",
+      900: "#330000"
     },
     tertiary: {
       // purple
@@ -83,7 +70,7 @@ export const tokens = {
       },
       secondary: {
         ...tokens.secondary,
-        main: tokens.secondary[500],
+        main: tokens.secondary[600],
       },
       tertiary: {
         ...tokens.tertiary,
@@ -95,10 +82,6 @@ export const tokens = {
       orange: {
         ...tokens.orange,
         main: tokens.orange[500],
-      },
-      red: {
-        ...tokens.red,
-        main: tokens.red[500],
       },
       background: {
         default: tokens.background.main,

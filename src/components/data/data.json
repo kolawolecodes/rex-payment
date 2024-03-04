@@ -1,8 +1,10 @@
+
 [
     {
         "title": "Home",
         "path": "/",
         "childrens": []
+        
     },
 
     {
@@ -107,7 +109,7 @@
             },
             {
                 "title": "Charge by Transfer",
-                "path": "/ChargeTransfer"
+                "path": "/chargetransfer"
             },
             {
                 "title": "Charge by USSD",

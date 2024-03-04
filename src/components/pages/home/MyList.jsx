@@ -1,21 +1,23 @@
 import { Box, useTheme } from '@mui/material'
+import { styled } from '@mui/material/styles'
 import React from 'react'
+import { Step, Stepindex, Stepwrap } from '../../style/StepStyles';
+
+
 
 function MyList({items}) {
     const {palette} = useTheme();
   return (
-    <div className='testMode_list'>
+    <Stepwrap className='testMode_list'>
         {
             items.map((item, index) => (
-                <span className='testMode_list_unit' key={index}>
-                    <Box className='test_list_index' bgcolor={palette.grey[100]}>
-                        <span>{index+1}</span>
-                    </Box>
-                    <span className='testMode_unit_details'>{item.title}:<span>{item.details}</span></span>
-                </span>
+                <Step className='testMode_list_unit' key={index}>
+                    <Stepindex bgcolor={palette.grey[100]}>{index+1}</Stepindex>
+                    <span className='testMode_unit_details'>{item.title}:<span>{item.details}</span></span>    
+                </Step>
             ))
         }
-    </div>
+    </Stepwrap>
   )
 }
 

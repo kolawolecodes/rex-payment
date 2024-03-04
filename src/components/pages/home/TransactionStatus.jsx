@@ -1,7 +1,7 @@
 import React from 'react'
-import { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper'
+import { HeadContainer, InnerPageContainer, PageWrapper, SubContent } from '../../boxes-style/page_wrapper'
 import HeaderDetails from './HeaderDetails'
-import Title_Details from './Title_Details'
+import TitleDetails from './TitleDetails'
 import ErrorBox from '../../errorBox/ErrorBox'
 import ErrorBox2 from '../../errorBox/ErrorBox2'
 import ErrorIcon from '@mui/icons-material/Error';
@@ -11,20 +11,29 @@ import Helpful from './Helpful'
 
 function TransactionStatus() {
   return (
-    <PageWrapper>
-        <InnerPageContainer width="60%">
-            <HeadContainer>
-                <HeaderDetails 
-                    title="Get Transaction Title"
-                    details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
-                />
-            </HeadContainer>
+    <PageWrapper
+        sx={(theme) => ({ width:"70%", margin:"0", gap:"15px",
+            [theme.breakpoints.up("md")]: { },
+            [theme.breakpoints.down("sm")]: {width:"100%" }
+        })}
+    >
+        <InnerPageContainer
+            sx={(theme) => ({ 
+                [theme.breakpoints.up("md")]: { },
+                [theme.breakpoints.down("sm")]: {width:"100%", margin:"" }
+        
+            ,})}
+        >
+            <HeaderDetails 
+                title="Get Transaction Title"
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
+            />
 
-            <Title_Details 
+            <TitleDetails 
                 title="How to verify payment"
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
             />
-            <Title_Details 
+            <TitleDetails 
                 title="Collect customer information"
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio sint delectus voluptatem officia eum nostrum!"
             />
@@ -36,9 +45,7 @@ function TransactionStatus() {
             />
 
             <SubContent>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SubContent>
 
             <ShowResPdash 
@@ -53,7 +60,7 @@ function TransactionStatus() {
                      for each SDK in its documentation. if you find an endpoint that's missing in your prefered SDK, pls send in a PR"  
                 />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Change returning users"
                 details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit, 
                 natus, laudantium quod ab! A repudiandae, totam velit nihil minus cupiditate."

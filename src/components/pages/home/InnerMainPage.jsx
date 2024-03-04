@@ -9,10 +9,27 @@ import BackEnd from "./BackEnd"
 import Mobile from "./Mobile"
 import CreatePayment from "./CreatePayment"
 import TransactionStatus from "./TransactionStatus"
+import { styled } from "@mui/material/styles"
+import { Box } from '@mui/material'
+
+const Innermain = styled(Box)(( {theme} ) => ({
+  marginTop:"90px",
+  paddingBottom:"90px",
+  width:"100%",
+  height:"100%",
+  paddingTop:"1rem",
+  justifyContent:"column",  
+  overflow:"hidden",
+  
+
+  [theme.breakpoints.only("sm")]:{ },
+  [theme.breakpoints.down("sm")]:{ marginTop:"55px", paddingBottom:"120px",},
+}))
 
 function InnerMainPage() {
   return (
-    <div className='innerMain'>
+    <Innermain
+    >
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/quickStart" element={<QuickStart/>} />
@@ -25,7 +42,7 @@ function InnerMainPage() {
             <Route path="/createpayment" element={<CreatePayment/>} />
             <Route path="/transstatus" element={<TransactionStatus/>} />
         </Routes>
-    </div>
+    </Innermain>
   )
 }
 

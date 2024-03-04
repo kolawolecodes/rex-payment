@@ -1,12 +1,13 @@
 import React from 'react'
-import { HeadContainer, HeadTitle, InnerPageContainer, PageWrapper, SubContent } from '../../boxes_style/page_wrapper'
+import { HeadContainer, HeadTitle, InnerPageContainer, PageWrapper, SubContent } from '../../boxes-style/page_wrapper'
 import ErrorBox from '../../errorBox/ErrorBox'
 import Helpful from './Helpful'
 import Footer from '../footer/Footer'
 import ForumIcon from '@mui/icons-material/Forum';
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import Title_Details from './Title_Details'
+import TitleDetails from './TitleDetails'
 import { Box, useTheme } from '@mui/material'
+import {styled } from '@mui/material/styles'
 import { HandlingList, javaMessage, require4Sigle, require4multi, requirements } from '../../data/sideStepData'
 import Requirement from './Requirement'
 import HtmlJavaDashoard from './HtmlJavaDashoard'
@@ -14,58 +15,78 @@ import ErrorBox2 from '../../errorBox/ErrorBox2'
 import Handling from './Handling'
 import JavaDashoard from './JavaDashboard'
 import WarningIcon from '@mui/icons-material/Warning';
+import Heading from '../../utilities/Heading'
+
+const MiddleSubHead = styled(Box)(({theme}) => ({
+    display:"inline-Block", 
+    width:"100%",  
+    borderBottom:"0.04rem solid", 
+    fontSize:"0.8rem",
+    borderColor: theme.palette.grey[400], 
+    
+}));
 
 
 function CreatePayment() {
     const {palette} = useTheme();
   return (
-    <PageWrapper>
-        <InnerPageContainer width="60%">
-            <HeadContainer>
-                <HeadTitle fontSize="0.9rem" fontWeight="800">
-                    <h1>Create Payment</h1>
-                </HeadTitle>
+    <PageWrapper sx={(theme) => ({ width:"60%", margin:"auto", gap:"15px",
+        [theme.breakpoints.up("md")]: { },
+        [theme.breakpoints.down("sm")]: {width:"100%" }
 
-                <div style={{width:"100%"}}>
-                    <ErrorBox 
-                        message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores delectus at 
-                        officiis. Provident magnam esse qui atque dolorum!"
-                    />
+    ,})}>
+        <InnerPageContainer  
+            sx={(theme) => ({ 
+            [theme.breakpoints.up("md")]: { },
+            [theme.breakpoints.down("sm")]: {width:"100%", margin:"" }
+    
+        ,})}
+        >
+                <Heading 
+                   title= "Create Payment"
+                />
 
-                </div>
+                <ErrorBox 
+                    message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores delectus at 
+                    officiis. Provident magnam esse qui atque dolorum!"
+                />
 
-                <Title_Details 
+                <TitleDetails 
                     title="Popup"
                     details="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores 
                     delectus at officiis. Provident magnam esse qui atque dolorum!"
                 />
 
                 {/* the main list now */}
-                <div className='requirement_wrapper'>
+                <Box sx={(theme) => ({
+                        borderColor: palette.grey[400],
+                        border:"0.04rem solid",
+                        borderRadius:"0.5rem",
+                    })}>
                     <Requirement 
                         items = {requirements}
                     />
-                    <Box display="inline"  width="65%" fontSize="0.8rem">
-                        <h3>For single <span style={{color:'green', cursor:"pointer"}}> split pamyment</span></h3>
-                    </Box>
+                    <MiddleSubHead>
+                        <h3 style={{padding:"1rem 2rem"}}>For single <span style={{color:'green', cursor:"pointer",}}> split pamyment</span></h3>
+                    </MiddleSubHead>
 
-                    <Requirement 
+                    <Requirement
                         items = {require4Sigle}
                     />
 
-                    <Box display="grid" gridTemplateColumns="3fr 1fr 2fr" width="65%" fontSize="0.8rem">
-                        <h3>For Multi <span style={{color:'green', cursor:"pointer"}}> split pamyment</span></h3>
-                    </Box>
+                    <MiddleSubHead>
+                        <h3 style={{padding:"1rem 2rem"}}>For Multi <span style={{color:'green', cursor:"pointer"}}> split pamyment</span></h3>
+                    </MiddleSubHead>
 
                     <Requirement 
                         items = {require4multi}
                     />
-                </div>
+                </Box>
 
                 <SubContent margin="1.5rem 0">
-                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit.
-                    </span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit.
+                    
                 </SubContent>
 
                 <HtmlJavaDashoard 
@@ -75,10 +96,8 @@ function CreatePayment() {
                 />
 
                 <SubContent margin="1.5rem 0">
-                    <span>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit.
-                    </span>
                 </SubContent>
 
                 <ErrorBox 
@@ -86,12 +105,12 @@ function CreatePayment() {
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."
                 />
 
-                <Title_Details 
+                <TitleDetails 
                     title="Important notes"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
                 />
-                <Title_Details 
+                <TitleDetails 
                     title="Handle the callback methods"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -99,7 +118,11 @@ function CreatePayment() {
 
                 {/* change this laterto prompt not error */}
                 <ErrorBox2 
-                    icon={<WarningIcon sx={{ fontSize:"2rem", marginTop:"1rem", color:"#990000"}}/>}
+                    icon={<WarningIcon sx={(theme) => ({
+                        fontSize:"2rem", color:"#990000",
+                        [theme.breakpoints.only("sm")]: {fontSize:"1.6rem"},
+                        [theme.breakpoints.down("sm")]: {fontSize:"1.6rem"}
+                    })}/>}
                     errorTitle="Helpful tips"
                     message="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -118,10 +141,8 @@ function CreatePayment() {
                 />
 
                 <SubContent margin="1.5rem 0">
-                    <span>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit.
-                    </span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit.
                 </SubContent>
 
                 <JavaDashoard 
@@ -130,24 +151,30 @@ function CreatePayment() {
                 />
 
                 <ErrorBox2
-                    icon={<WarningIcon sx={{ fontSize:"2rem", marginTop:"1rem", color:"#990000"}}/>}
+                    icon={<WarningIcon 
+                        sx={(theme) => ({
+                            fontSize:"2rem", color:"#990000",
+                            [theme.breakpoints.only("sm")]: {fontSize:"1.6rem"},
+                            [theme.breakpoints.down("sm")]: {fontSize:"1.6rem"}
+                        })}
+                        />}
                     errorTitle="Limited Support"
                     message="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
                 />
 
-                <Title_Details 
+                <TitleDetails 
                     title="Verify Transaction"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
                 />
-                <Title_Details 
+                <TitleDetails 
                     title="Handle webhook"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
                 />
 
-                <Title_Details 
+                <TitleDetails 
                     title="Redirect"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -160,7 +187,7 @@ function CreatePayment() {
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
                 />
 
-                <Title_Details 
+                <TitleDetails 
                     title="Collect customer information"
                     details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."
@@ -171,7 +198,7 @@ function CreatePayment() {
                 items = {javaMessage}
                 />
 
-                <Title_Details 
+                <TitleDetails 
                 title="Initialize transaction"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -182,30 +209,30 @@ function CreatePayment() {
             message = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, accusamus. Sequi, qui quis sit dignissimos ipsa quos tempore."
             />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Verify Transaction"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
             />
-            <Title_Details 
+            <TitleDetails 
                 title="Handle webhook"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
             />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Mobile SDKs"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
             />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Charge APIs"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
             />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Use cases"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -216,7 +243,7 @@ function CreatePayment() {
             message = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, accusamus. Sequi, qui quis sit dignissimos ipsa quos tempore."
             />
 
-            <Title_Details 
+            <TitleDetails 
                 title="Charge APIs"
                 details="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Ipsam vel voluptatem tempora doloremque ipsum asperiores illo sunt velit."  
@@ -228,11 +255,7 @@ function CreatePayment() {
                 />
             </div>
 
-            </HeadContainer>
-
-
             
-
             {/* Helpful question */}
             <Helpful />
             

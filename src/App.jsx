@@ -1,33 +1,62 @@
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
+import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { themeSettings } from "./theme"
-// import QuickStart from "./components/pages/home/QuickStart"
-// import Authentication from "./components/pages/home/Authentication"
-// import PaymentMethod from "./components/pages/home/PaymentMethod"
-// import PaymentPage from "./components/pages/home/PaymentPage"
-// import FrontEnd from "./components/pages/home/FrontEnd"
-// import BackEnd from "./components/pages/home/BackEnd"
-// import CreatePayment from "./components/pages/home/CreatePayment"
-// import TransactionStatus from "./components/pages/home/TransactionStatus"
-// import Mobile from "./components/pages/home/Mobile"
-// import Home from "./components/pages/home/Home"
 import Sidebar from "./components/pages/home/SideBar"
 import MainPage from "./components/pages/home/MainPage"
+import { useTheme } from "@emotion/react"
+import { styled } from "@mui/material/styles"
+import { mytheme } from "./components/style/Style"
 
+const Appwrapper = styled(Box)(({ theme}) => ({
+  display: "flex",
+  minHeight:"100vh",
+  height: "auto",
+  width: "100%",
+  maxWidth: "100vw",
+  overflowX: "hidden",
 
+  [theme.breakpoints.up("sm")]: { overflowX:"hidden",
+    '&::-webkit-scrollbar': {
+      display:"none"
+    },
+  },
+  [theme.breakpoints.down("sm")]: {padding:"0 0.5rem", flexWrap:"wrap", flexDirection:"column", justifyContent:"center", overflowY:"auto", overflowX:"hidden",
+        '&::-webkit-scrollbar': {
+          display:"none"
+        },
+      },
+
+    }));
 
 function App() {
-  // const theme = useMemo(() => createTheme(themeSettings), []);
+
+  const theme = useMemo(() => createTheme(themeSettings), []);
+
+    const [w, setW] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setW(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        };
+    })
     return (
-      <div className='app'>
+      <Appwrapper className="app">
           <BrowserRouter>
-                {/* <ThemeProvider theme={theme}> */}
-                  {/* <CssBaseline/> */}
-                  <MainPage />
-                {/* </ThemeProvider> */}
+
+              <Sidebar />
+            <ThemeProvider theme={theme}>
+              <CssBaseline/>
+                <MainPage />
+            </ThemeProvider>
           </BrowserRouter>
-      </div>  
+      </Appwrapper>  
     )
   }
 
